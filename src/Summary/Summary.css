@@ -1,0 +1,15 @@
+.Summary-container {
+  display: flex;
+  flex-direction: column;
+  background-color: lightskyblue;
+  align-items: center;
+  width: 100%;
+}
+
+.Summary-information {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  font-family: AutumnHappiness;
+  font-size: 40px;
+}
