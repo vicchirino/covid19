@@ -2,6 +2,8 @@
 
 Typescript web application for displaying some information about COVID-19
 
+avialable on `victorchirino.com/covid19`
+
 Fetching information from `https://api.covid19api.com`
 
 ### Run locally `npm start`
