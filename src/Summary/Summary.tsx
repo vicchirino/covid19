@@ -1,25 +1,46 @@
 import React from "react"
 import './Summary.css';
+import SummaryProgressBar from "./SummaryProgressBar";
+import SummaryGrid from "./SummaryGrid";
 
 type SummaryProps = {
   totalConfirmed: number
   totalRecovered: number
   totalDeaths: number
+  newConfirmed: number
+  newRecovered: number
+  newDeaths: number
 }
 
-const Summary = (props: SummaryProps) => {
+const Summary = ({
+  totalConfirmed,
+  totalRecovered,
+  totalDeaths,
+  newConfirmed,
+  newRecovered,
+  newDeaths
+}: SummaryProps) => {
+
+
   return(
     <div className="Summary-container">
-    <div className="Summary-information" style={{color: "#E74C3C"}}>
-      {`Total confirmed: ${props.totalConfirmed}`} 
+      <div className="Summary-title">
+        Worldwide
+      </div>
+      <SummaryGrid 
+        totalRecovered={totalRecovered}
+        totalDeaths={totalDeaths}
+        totalConfirmed={totalConfirmed}
+        newConfirmed={newConfirmed}
+        newDeaths={newDeaths}
+        newRecovered={newRecovered}
+      />
+      <SummaryProgressBar
+        totalRecovered={totalRecovered}
+        totalDeaths={totalDeaths}
+        totalConfirmed={totalConfirmed}
+        />
     </div>
-    <div className="Summary-information" style={{color: "#2ECC71"}}>
-      {`Total recovered: ${props.totalRecovered}`} 
-    </div>
-    <div className="Summary-information" style={{color: "#424949"}}>
-      {`Total death: ${props.totalDeaths}`} 
-    </div>
-  </div>
   )
 
 }

@@ -5,40 +5,16 @@
   align-items: center;
   justify-content: stretch;
   flex-direction: column;
+  background-color: var(--color-primary);
 }
 
 .Header {
   display: flex;
-  height: 30%;
   width: 100%;
 }
 
-.Countries {
-  background-color: lightslategrey;
+.Information {
   display: flex;
-  flex-direction: column;
-  height: 70%;
-  overflow-y: scroll;
-}
-
-.Countries-header {
-  display: flex;
-  padding: 10px;
-  font-family: AutumnHappiness;
-  font-size: 20px;
-  background-color: thistle;
-  align-items: center;
-  justify-content: center;
-}
-
-.Country-container {
-  display: flex;
-  padding: 5px;
-  border-bottom: 1px solid white;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.Country-information {
-  color: #424949;
+  /* width: 100%; */
+  overflow: hidden;
 }

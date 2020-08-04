@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 import Summary from './Summary/Summary'
+import Countries from './Conuntries/Countries'
 
 
-type Country = {
+export type Country = {
   Country: string
   CountryCode: string
   NewConfirmed: number
@@ -34,6 +35,9 @@ function App() {
   const [totalConfirmed, setTotalConfirmed] = useState(0)
   const [totalRecovered, setTotalRecovered] = useState(0)
   const [totalDeaths, setTotalDeaths] = useState(0)
+  const [newConfirmed, setNewConfirmed] = useState(0)
+  const [newRecovered, setNewRecovered] = useState(0)
+  const [newDeaths, setNewDeaths] = useState(0)
   const [countries, setCountries] = useState([])
 
   const isLoading = totalConfirmed === 0 && totalRecovered === 0 && totalDeaths === 0
@@ -48,6 +52,9 @@ function App() {
       setTotalRecovered(result.data.Global.TotalRecovered)
       setTotalDeaths(result.data.Global.TotalDeaths)
       setCountries(result.data.Countries)
+      setNewConfirmed(result.data.Global.NewConfirmed)
+      setNewRecovered(result.data.Global.NewRecovered)
+      setNewDeaths(result.data.Global.NewDeaths)
     }   
     fetchData()
    }, []);
@@ -65,33 +72,18 @@ function App() {
     <div className="App">
 
       <div className="Header" >
-      <Summary 
-        totalConfirmed={totalConfirmed}
-        totalDeaths={totalDeaths}
-        totalRecovered={totalRecovered}
-      />
-
+        <Summary 
+          totalConfirmed={totalConfirmed}
+          totalDeaths={totalDeaths}
+          totalRecovered={totalRecovered}
+          newConfirmed={newConfirmed}
+          newRecovered={newRecovered}
+          newDeaths={newDeaths}
+        />
       </div>
-
-      
-      <div className="Countries">
-        <div className="Countries-header">
-            Countries
-        </div>
-    
-          {
-            sortedCountries.map((country: Country) => {
-              return (
-                <div key={`${country}-container`} className="Country-container"> 
-                  <div key={`${country}-info`} className="Country-information">
-                    {`${country.Country} - Total Cases ${country.TotalConfirmed}`}
-                  </div>
-                </div>
-              )
-            })
-          }
+      <div className="Information">
+        <Countries countries={sortedCountries} />
       </div>
-
     </div>
   );
 }

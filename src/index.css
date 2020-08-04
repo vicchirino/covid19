@@ -4,6 +4,19 @@
     ur('./fonts/Autumn-Happiness.ttf') format('truetype');
 }
 
+:root {
+  /* --global-font-size: 0.8rem;
+  --global-primary-title-size: 2rem; */
+  --color-primary: #363232;
+  --color-secondary: #6b6b6b;
+  --color-black: #161616;
+  --color-white: #fbfbfb;
+  --color-error: #E74C3C;
+  --color-warning: #ffca35;
+  --color-success: #58D68D;
+  --color-background: #D6DBDF;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
