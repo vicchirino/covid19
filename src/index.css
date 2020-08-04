@@ -1,12 +1,7 @@
-@font-face {
-  font-family: 'AutumnHappiness';
-  src: local('AutumnHappiness'),
-    ur('./fonts/Autumn-Happiness.ttf') format('truetype');
-}
-
 :root {
   /* --global-font-size: 0.8rem;
   --global-primary-title-size: 2rem; */
+  --global-font-family: Verdana, sans-serif;
   --color-primary: #363232;
   --color-secondary: #6b6b6b;
   --color-black: #161616;
@@ -19,9 +14,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Verdana', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

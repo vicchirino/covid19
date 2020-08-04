@@ -8,35 +8,22 @@
 
 .Summary-title {
   padding: 25px;
-  font-family: AutumnHappiness;
   font-size: 35px;
   color: var(--color-white);
 }
 
 .Summary-information-container {
   display: flex;
-  /* flex-direction: row; */
-  /* flex-basis: 100%; */
-  /* flex-grow: 1; */
-  /* justify-content: space-between; */
-  min-width: 400px;
+  min-width: 450px;
 }
 
 .Summary-information {
-  /* padding: 10px; */
   display: flex;
   flex-direction: column;
-  font-family: AutumnHappiness;
   color: var(--color-white);
   font-size: 25px;
-  /* background-color: greenyellow; */
   border: 1px solid var(--color-white);
   flex: 1 0 0px;
-  /* width: 33.333%; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* flex-grow: 1; */
-  /* width: 0; */
 }
 
 .Summary-information-newcases {
@@ -46,7 +33,6 @@
 
 
 .Summary-information-number {
-  font-family: AutumnHappiness;
   font-size: 30px;
   color: var(--color-secondary)
 }
@@ -70,7 +56,6 @@
 }
 
 .SummaryProgressBar-confirmed {
-  font-family: AutumnHappiness;
   background-color: var(--color-error);
   padding-left: 5px;
   display: flex;
@@ -80,7 +65,6 @@
 }
 
 .SummaryProgressBar-recovered {
-  font-family: AutumnHappiness;
   background-color: var(--color-success);
   padding-left: 5px;
   display: flex;
@@ -90,7 +74,6 @@
 }
 
 .SummaryProgressBar-deaths {
-  font-family: AutumnHappiness;
   background-color: var(--color-secondary);
   padding-left: 5px;
   display: flex;

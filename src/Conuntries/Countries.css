@@ -10,7 +10,6 @@
 .Countries-header {
   display: flex;
   padding: 10px;
-  font-family: AutumnHappiness;
   font-size: 25px;
   align-items: center;
   justify-content: center;
@@ -30,7 +29,6 @@
 }
 
 .Country-name {
-  font-family: AutumnHappiness;
   font-weight: bold;
   color: var(--color-primary);
   font-size: 22px;
@@ -41,19 +39,15 @@
   flex-direction: row;
   padding: 0 10px;
   align-items: center;
-  /* padding: 5px;
-  color: #424949; */
 }
 
 .Country-information-confirmed {
-  font-family: AutumnHappiness;
   font-weight: bold;
   color: var(--color-secondary);
   font-size: 20px;
 }
 
 .Country-information-new {
-  font-family: AutumnHappiness;
   color: var(--color-error);
   font-size: 15px;
   padding-left: 5px;

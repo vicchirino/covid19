@@ -6,6 +6,7 @@
   justify-content: stretch;
   flex-direction: column;
   background-color: var(--color-primary);
+  border: 10px solid var(--color-white);
 }
 
 .Header {
