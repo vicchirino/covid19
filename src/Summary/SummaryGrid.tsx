@@ -1,5 +1,5 @@
 import React from "react"
-import { formatNumber } from "../utils/helpers"
+import { formatNumber, numberWithCommas } from "../utils/helpers"
 
 type SummaryGridProps = {
   totalConfirmed: number
@@ -21,30 +21,30 @@ const SummaryGrid = ({
   return (
       <div className="Summary-information-container">
         <div className="Summary-information">
-          Confirmed
+          confirmed
           <div className="Summary-information-number">
-           {formatNumber(totalConfirmed)}
+           {numberWithCommas(totalConfirmed)}
           </div>
           <div className="Summary-information-newcases">
-          {`+ ${formatNumber(newConfirmed)}`}
+          {`+${formatNumber(newConfirmed)}`}
           </div>
        </div>
         <div className="Summary-information">
-          Recovered
+          recovered
           <div className="Summary-information-number">
-            {formatNumber(totalRecovered)}
+            {numberWithCommas(totalRecovered)}
           </div>
           <div className="Summary-information-newcases">
-          {`+ ${formatNumber(newRecovered)}`}
+          {`+${formatNumber(newRecovered)}`}
           </div>
         </div>
         <div className="Summary-information">
-          Death
+          death
           <div className="Summary-information-number">
-            {formatNumber(totalDeaths)}
+            {numberWithCommas(totalDeaths)}
           </div>
           <div className="Summary-information-newcases">
-          {`+ ${formatNumber(newDeaths)}`}
+          {`+${formatNumber(newDeaths)}`}
           </div>
         </div>
       </div>

@@ -3,32 +3,7 @@ import axios from 'axios';
 import './App.css';
 import Summary from './Summary/Summary'
 import Countries from './Conuntries/Countries'
-
-
-export type Country = {
-  Country: string
-  CountryCode: string
-  NewConfirmed: number
-  NewDeaths: number
-  NewRecovered: number
-  TotalConfirmed: number
-  TotalDeaths: number
-  TotalRecovered: number
-  Date: string
-}
-
-
-type SummaryResponse = {
-  Global: {
-    NewConfirmed: number
-    NewDeaths: number
-    NewRecovered: number
-    TotalConfirmed: number
-    TotalDeaths: number
-    TotalRecovered: number
-  }
-  Countries?: Country[]
-}
+import { Country} from './model/Country'
 
 function App() {
 

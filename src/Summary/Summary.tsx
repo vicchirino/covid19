@@ -25,7 +25,7 @@ const Summary = ({
   return(
     <div className="Summary-container">
       <div className="Summary-title">
-        Worldwide
+         Global Situation
       </div>
       <SummaryGrid 
         totalRecovered={totalRecovered}

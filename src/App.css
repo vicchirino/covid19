@@ -1,21 +1,27 @@
 .App {
   text-align: center;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: stretch;
   flex-direction: column;
-  background-color: var(--color-primary);
-  border: 10px solid var(--color-white);
+  background-color: var(--color-background-primary);
 }
+
+
+/* @media (max-width: 500px) {
+  .App {
+    height: 1024px;
+  }
+} */
+
 
 .Header {
   display: flex;
+  margin: 20px 0;
   width: 100%;
 }
 
 .Information {
   display: flex;
-  /* width: 100%; */
-  overflow: hidden;
+  width: 100%;
 }
