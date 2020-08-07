@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
 }
 
 .Countries-header {
@@ -10,8 +11,9 @@
   font-size: 30px;
   align-items: center;
   justify-content: flex-start;
-  border-bottom: 1px solid var(--color-white);
   color: var(--color-white);
+  border-top: 1px solid var(--color-text-primary);
+  border-bottom: 1px solid var(--color-text-primary);
 }
 
 .Country-container {
@@ -43,12 +45,12 @@
 
 .Country-information-confirmed {
   /* font-weight: bold; */
-  color: var(--color-secondary);
+  color: var(--color-text-primary);
   font-size: 20px;
 }
 
 .Country-information-new {
-  color: var(--color-error);
+  color: var(--color-text-secondary);
   font-size: 15px;
   padding-left: 5px;
 }
