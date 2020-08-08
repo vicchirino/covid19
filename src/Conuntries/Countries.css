@@ -1,19 +1,29 @@
 .Countries {
   display: flex;
   flex-direction: column;
+  position: relative;
   height: 100%;
   width: 100%;
 }
 
+.Country-container:first-of-type { 
+  padding-top: 20px;
+ }
+
+
 .Countries-header {
   display: flex;
-  padding: 20px;
+  /* padding: 20px; */
+  height: var(--nav-bar-height);
+  box-sizing: border-box;
   font-size: 30px;
   align-items: center;
   justify-content: flex-start;
   color: var(--color-white);
   border-top: 1px solid var(--color-text-primary);
   border-bottom: 1px solid var(--color-text-primary);
+  position: sticky;
+  top: 0; /* Don't forget this, required for the stickiness */
 }
 
 .Country-container {

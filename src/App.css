@@ -2,21 +2,33 @@
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center;
   justify-content: stretch;
   flex-direction: column;
   background-color: var(--color-background-primary);
+  scroll-behavior: smooth;
+}
+
+.Container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  text-align: center;
+  justify-content: stretch;
+  margin-top: var(--nav-bar-height);
+  width: 100%;
+  max-width: 1200px;
 }
 
 .Header {
   display: flex;
-  margin: 76px 0;
+  /* padding-top: var(--nav-bar-height); */
   width: 100%;
   max-width: 1200px;
 }
 
 .Information {
   display: flex;
+  padding-top: 20px;
   width: 100%;
   max-width: 1200px;
 }

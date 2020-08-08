@@ -46,19 +46,20 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-
-      <div className="Header" >
-        <Summary 
-          totalConfirmed={totalConfirmed}
-          totalDeaths={totalDeaths}
-          totalRecovered={totalRecovered}
-          newConfirmed={newConfirmed}
-          newRecovered={newRecovered}
-          newDeaths={newDeaths}
-        />
-      </div>
-      <div className="Information">
-        <Countries countries={sortedCountries} />
+      <div className="Container">
+        <div className="Header" >
+          <Summary 
+            totalConfirmed={totalConfirmed}
+            totalDeaths={totalDeaths}
+            totalRecovered={totalRecovered}
+            newConfirmed={newConfirmed}
+            newRecovered={newRecovered}
+            newDeaths={newDeaths}
+          />
+        </div>
+        <div className="Information">
+          <Countries countries={sortedCountries} />
+        </div>
       </div>
     </div>
   );

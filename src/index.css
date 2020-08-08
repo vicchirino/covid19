@@ -14,6 +14,7 @@
   --color-text-secondary: #8a817c;
   --color-alt-text-primary: #ffffff;
   --color-alt-text-secondary: #CCC5B9;
+  --nav-bar-height: 56px;
 }
 
 body {

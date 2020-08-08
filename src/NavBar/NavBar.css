@@ -4,10 +4,23 @@
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 56px;
+  height: 56px;
   background-color: var(--color-secondary);
   flex-direction: row;
   justify-content: space-between;
+  z-index: 1;
+  /* overflow: hidden; */
+}
+
+.NavBar-title {
+  display: flex;
+  font-size: 30px;
+  height: var(--nav-bar-height);
+  background-color: violet;
+  color: var(--color-alt-text-secondary);
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 56px; */
 }
 
 .NavBar-name {
@@ -17,7 +30,6 @@
   align-items: center;
   color: var(--color-alt-text-primary);
   font-size: 20px;
-  font-weight: bolder;
   text-decoration: none;
 }
 
@@ -25,7 +37,7 @@
   display: flex;
   flex-direction: row;
   padding: 0 5px;
-  height: 56px;
+  height: var(--nav-bar-height);
 }
 
 .NavBar-icon-container {
