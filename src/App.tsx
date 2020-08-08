@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import './App.css';
 import Summary from './Summary/Summary'
@@ -34,6 +34,8 @@ function App() {
     fetchData()
    }, []);
 
+   const targetRef = useRef<HTMLDivElement>(null)
+
    if (isLoading) {
       return <div>"Loading.."</div>
    }
@@ -45,8 +47,8 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />
-      <div className="Container">
+      <NavBar containerRef={targetRef}/>
+      <div className="Container" ref={targetRef}>
         <div className="Header" >
           <Summary 
             totalConfirmed={totalConfirmed}

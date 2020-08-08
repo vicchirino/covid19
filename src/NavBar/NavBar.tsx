@@ -1,21 +1,39 @@
-import React from "react"
+import React, { useState } from "react"
 import './NavBar.css';
+import { useScrollPosition } from "../hooks/useScrollPosition";
 
 type NavBarProps = {
-  distanceScrolled?: number
+  containerRef?: React.RefObject<HTMLDivElement>
 }
 
 const navBarHeight = 56
 
-const NavBar = ({ distanceScrolled = 0 } : NavBarProps) => {
+const NavBar = ({ containerRef } : NavBarProps) => {
+
+
+  const [displayTitle, setDisplayTitle] = useState(false)
+  const header = containerRef?.current?.firstChild
+  // @ts-ignore
+  const headerHeight = header?.offsetHeight
+
+  useScrollPosition(({ prevPos, currPos }) => {
+    if ( currPos.y < 0 ) {
+      if (Math.abs(currPos.y) >= headerHeight + navBarHeight + 20) {
+        setDisplayTitle(true)
+      } else {
+        setDisplayTitle(false)
+      }
+    }
+  },
+  [header, displayTitle])
 
   return (
     <div className="NavBar-container">
        <a className="NavBar-name"  href='https://www.victorchirino.com'>
           Victor Chirino
        </a>
-       {distanceScrolled > 0 &&
-        <div className="NavBar-title" style={{ marginTop:`${navBarHeight-distanceScrolled}px` }}>
+       {displayTitle &&
+        <div className="NavBar-title">
           Countries
         </div>
        }

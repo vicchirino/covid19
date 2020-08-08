@@ -16,11 +16,17 @@
   display: flex;
   font-size: 30px;
   height: var(--nav-bar-height);
-  background-color: violet;
+  /* background-color: violet; */
   color: var(--color-alt-text-secondary);
   align-items: center;
   justify-content: center;
   /* margin-top: 56px; */
+}
+
+@media (max-width: 600px) {
+  .NavBar-title {
+    display: none;
+  }
 }
 
 .NavBar-name {
