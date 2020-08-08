@@ -25,9 +25,10 @@
   border: 1px solid var(--color-text-primary);
   flex: 1 0 0px;
   width: 33.3%;
+  overflow: hidden;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .Summary-information-container {
     flex-direction: column;
   }
@@ -44,7 +45,7 @@
 
 
 .Summary-information-number {
-  font-size: 30px;
+  font-size: max(25px, 1vw);
   color: var(--color-text-primary);
   font-weight: initial;
 }

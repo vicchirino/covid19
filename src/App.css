@@ -2,26 +2,21 @@
   text-align: center;
   display: flex;
   align-items: center;
+  justify-content: center;
   justify-content: stretch;
   flex-direction: column;
   background-color: var(--color-background-primary);
 }
 
-
-/* @media (max-width: 500px) {
-  .App {
-    height: 1024px;
-  }
-} */
-
-
 .Header {
   display: flex;
   margin: 20px 0;
   width: 100%;
+  max-width: 1200px;
 }
 
 .Information {
   display: flex;
   width: 100%;
+  max-width: 1200px;
 }
