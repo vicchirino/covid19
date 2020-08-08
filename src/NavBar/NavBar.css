@@ -1,0 +1,43 @@
+.NavBar-container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 56px;
+  background-color: var(--color-secondary);
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.NavBar-name {
+  padding-left: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--color-alt-text-primary);
+  font-size: 20px;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.NavBar-social {
+  display: flex;
+  flex-direction: row;
+  padding: 0 5px;
+  height: 56px;
+}
+
+.NavBar-icon-container {
+  height: 100%;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.NavBar-icon {
+  height: 25px;
+  width: 25px;
+  padding: 0 5px
+}

@@ -4,7 +4,7 @@ import './App.css';
 import Summary from './Summary/Summary'
 import Countries from './Conuntries/Countries'
 import { Country} from './model/Country'
-
+import NavBar from './NavBar/NavBar';
 function App() {
 
   const [totalConfirmed, setTotalConfirmed] = useState(0)
@@ -45,6 +45,7 @@ function App() {
 
   return (
     <div className="App">
+      <NavBar />
 
       <div className="Header" >
         <Summary 
